@@ -1,0 +1,34 @@
+{
+  "name": "@barnardos/eslint-config-barnardos",
+  "version": "0.1.0",
+  "description": "Shared ESLint config for Barnardos",
+  "repository": "https://github.com/barnardos/eslint-config-barnardos.git",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "check-format": "prettier '**/*.{json,js,md}' --list-different --ignore-path .gitignore",
+    "format": "prettier '**/*.{json,js,md}' --write --ignore-path .gitignore",
+    "lint:js": "eslint . --ignore-path .gitignore",
+    "lint": "npm-run-all --parallel lint:*",
+    "pretest": "npm-run-all --parallel lint check-format",
+    "test": "jest --ci",
+    "watch-tests": "jest --watchAll"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-react": "^7.11.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "jest": "^23.6.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.15.3"
+  },
+  "peerDependencies": {
+    "eslint": "^5.9.0"
+  }
+}
