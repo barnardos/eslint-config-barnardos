@@ -2,9 +2,10 @@
 
 module.exports = {
   parser: "babel-eslint",
-  plugins: ["import", "import-order-alphabetical", "react"],
+  plugins: ["cypress", "import", "import-order-alphabetical", "react"],
   extends: [
     "eslint:recommended",
+    "plugin:cypress/recommended",
     "plugin:react/recommended",
     "plugin:import/recommended"
   ],
@@ -16,6 +17,7 @@ module.exports = {
   },
   env: {
     browser: true,
+    "cypress/globals": true,
     es6: true,
     jest: true,
     node: true
