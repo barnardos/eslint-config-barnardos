@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0
+
+### Added
+
+- Cypress plugin
+
 ## 0.2.0
 
 ### Added
