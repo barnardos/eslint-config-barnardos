@@ -1,22 +1,22 @@
 "use strict";
 
+const { ESLint } = require("eslint");
+
 const config = require("./");
 
-it("test basic properties of config", function() {
+it("test basic properties of config", function () {
   expect(isObject(config.parserOptions)).toBeTruthy();
   expect(isObject(config.env)).toBeTruthy();
   expect(isObject(config.rules)).toBeTruthy();
 });
 
-it("load config in ESLint to validate all rule syntax is correct", function() {
-  const CLIEngine = require("eslint").CLIEngine;
-
-  const cli = new CLIEngine({
+it("load config in ESLint to validate all rule syntax is correct", function () {
+  const eslint = new ESLint({
     useEslintrc: false,
-    configFile: "index.js"
+    overrideConfigFile: "index.js",
   });
 
-  expect(cli.executeOnText("var foo\n")).toBeTruthy();
+  expect(eslint.lintText("var foo\n")).toBeTruthy();
 });
 
 function isObject(obj) {

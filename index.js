@@ -7,29 +7,29 @@ module.exports = {
     "eslint:recommended",
     "plugin:cypress/recommended",
     "plugin:react/recommended",
-    "plugin:import/recommended"
+    "plugin:import/recommended",
   ],
   rules: {
     "import-order-alphabetical/order": [
       "warn",
-      { "newlines-between": "always" }
-    ]
+      { "newlines-between": "always" },
+    ],
   },
   env: {
     browser: true,
     "cypress/globals": true,
     es6: true,
     jest: true,
-    node: true
+    node: true,
   },
   parserOptions: {
     ecmaVersion: 6,
-    sourceType: "module"
+    sourceType: "module",
   },
   settings: {
     react: {
-      version: "16.0"
-    }
+      version: "16.0",
+    },
   },
-  globals: { graphql: true, page: true }
+  globals: { graphql: true, page: true },
 };
