@@ -1,6 +1,6 @@
 {
   "name": "@barnardos/eslint-config-barnardos",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Shared ESLint config for Barnardos",
   "repository": "https://github.com/barnardos/eslint-config-barnardos.git",
   "license": "MIT",
@@ -18,19 +18,17 @@
     "watch-tests": "jest --watchAll"
   },
   "dependencies": {
-    "babel-eslint": "^10.0.1",
+    "@babel/eslint-parser": "^7.16.3",
+    "babel-eslint": "^10.1.0",
     "eslint-plugin-cypress": "^2.2.1",
     "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-import-order-alphabetical": "0.0.2",
+    "eslint-plugin-import-order-alphabetical": "^1.0.1",
     "eslint-plugin-react": "^7.12.4"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "jest": "^24.7.1",
+    "eslint": "^7.32.0",
+    "jest": "^27.4.2",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.16.4"
-  },
-  "peerDependencies": {
-    "eslint": "^5.16.0"
+    "prettier": "^2.5.0"
   }
 }
