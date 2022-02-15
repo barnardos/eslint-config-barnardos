@@ -1,8 +1,8 @@
 "use strict";
 
 module.exports = {
-  parser: "babel-eslint",
-  plugins: ["cypress", "import", "import-order-alphabetical", "react"],
+  parser: "@babel/eslint-parser",
+  plugins: ["cypress", "import", "react"],
   extends: [
     "eslint:recommended",
     "plugin:cypress/recommended",
@@ -10,9 +10,15 @@ module.exports = {
     "plugin:import/recommended",
   ],
   rules: {
-    "import-order-alphabetical/order": [
+    "import/order": [
       "warn",
-      { "newlines-between": "always" },
+      {
+        "newlines-between": "always",
+        alphabetize: {
+          order: "asc",
+          caseInsensitive: true,
+        },
+      },
     ],
   },
   env: {
@@ -23,12 +29,13 @@ module.exports = {
     node: true,
   },
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 8,
+    requireConfigFile: false,
     sourceType: "module",
   },
   settings: {
     react: {
-      version: "16.0",
+      version: "17.0",
     },
   },
   globals: { graphql: true, page: true },

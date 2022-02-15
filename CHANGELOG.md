@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1
+
+- Updated all packages
+
 ## 0.4.0
 
 - Updated all packages

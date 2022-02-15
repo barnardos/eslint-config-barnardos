@@ -1,6 +1,6 @@
 {
   "name": "@barnardos/eslint-config-barnardos",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Shared ESLint config for Barnardos",
   "repository": "https://github.com/barnardos/eslint-config-barnardos.git",
   "license": "MIT",
