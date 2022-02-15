@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2
+
+- Removed dependency on `eslint-plugin-import-order-alphabetical`
+
 ## 0.4.1
 
 - Updated all packages
